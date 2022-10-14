@@ -22,7 +22,7 @@ jobs:
     condition: succeededOrFailed()
     inputs:
       testResultsFormat: VSTest
-      testResultsFiles: '**/*.zip' 
+      testResultsFiles: 'D:\a\r1\a\**\*.zip' 
 
 - job: macOS
   steps:
@@ -39,7 +39,7 @@ jobs:
     condition: succeededOrFailed()
     inputs:
       testResultsFormat: VSTest
-      testResultsFiles: '**/*.zip' 
+      testResultsFiles: 'D:\a\r1\a\**\*.zip' 
 
 - job: Windows
   pool:
@@ -60,7 +60,7 @@ jobs:
     condition: succeededOrFailed()
     inputs:
       testResultsFormat: VSTest
-      testResultsFiles: '**/*.zip' 
+      testResultsFiles: 'D:\a\r1\a\**\*.zip' 
 
 - job: LinuxRelease
   variables:
@@ -79,5 +79,5 @@ jobs:
     condition: succeededOrFailed()
     inputs:
       testResultsFormat: VSTest
-      testResultsFiles: '**/*.zip' 
+      testResultsFiles: 'D:\a\r1\a\**\*.zip' 
 
