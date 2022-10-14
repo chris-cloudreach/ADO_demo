@@ -18,11 +18,11 @@ jobs:
   - script: ./run-tests.sh
     displayName: 'run tests'
   - task: PublishTestResults@2
-    displayName: 'Publish Test Results **/*.trx'
+    displayName: 'Publish Test Results **/*.zip'
     condition: succeededOrFailed()
     inputs:
       testResultsFormat: VSTest
-      testResultsFiles: '**/*.trx' 
+      testResultsFiles: '**/*.zip' 
 
 - job: macOS
   steps:
@@ -35,11 +35,11 @@ jobs:
   - script: ./run-tests.sh
     displayName: 'run tests'
   - task: PublishTestResults@2
-    displayName: 'Publish Test Results **/*.trx'
+    displayName: 'Publish Test Results **/*.zip'
     condition: succeededOrFailed()
     inputs:
       testResultsFormat: VSTest
-      testResultsFiles: '**/*.trx' 
+      testResultsFiles: '**/*.zip' 
 
 - job: Windows
   pool:
@@ -56,11 +56,11 @@ jobs:
       filePath: .\run-tests.ps1
     displayName: 'run tests'
   - task: PublishTestResults@2
-    displayName: 'Publish Test Results **/*.trx'
+    displayName: 'Publish Test Results **/*.zip'
     condition: succeededOrFailed()
     inputs:
       testResultsFormat: VSTest
-      testResultsFiles: '**/*.trx' 
+      testResultsFiles: '**/*.zip' 
 
 - job: LinuxRelease
   variables:
@@ -75,9 +75,9 @@ jobs:
   - script: ./run-tests.sh
     displayName: 'run tests'    
   - task: PublishTestResults@2
-    displayName: 'Publish Test Results **/*.trx'
+    displayName: 'Publish Test Results **/*.zip'
     condition: succeededOrFailed()
     inputs:
       testResultsFormat: VSTest
-      testResultsFiles: '**/*.trx' 
+      testResultsFiles: '**/*.zip' 
 
