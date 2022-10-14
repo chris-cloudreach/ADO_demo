@@ -22,7 +22,8 @@ jobs:
     condition: succeededOrFailed()
     inputs:
       testResultsFormat: VSTest
-      testResultsFiles: 'D:\a\r1\a\**\*.zip' 
+      testResultsFiles: '**/*.trx' 
+  - task: PublishBuildArtifacts@1
 
 - job: macOS
   steps:
@@ -39,7 +40,8 @@ jobs:
     condition: succeededOrFailed()
     inputs:
       testResultsFormat: VSTest
-      testResultsFiles: 'D:\a\r1\a\**\*.zip' 
+      testResultsFiles: '**/*.trx' 
+  - task: PublishBuildArtifacts@1
 
 - job: Windows
   pool:
@@ -60,7 +62,8 @@ jobs:
     condition: succeededOrFailed()
     inputs:
       testResultsFormat: VSTest
-      testResultsFiles: 'D:\a\r1\a\**\*.zip' 
+      testResultsFiles: '**/*.trx' 
+  - task: PublishBuildArtifacts@1
 
 - job: LinuxRelease
   variables:
@@ -79,5 +82,6 @@ jobs:
     condition: succeededOrFailed()
     inputs:
       testResultsFormat: VSTest
-      testResultsFiles: 'D:\a\r1\a\**\*.zip' 
+      testResultsFiles: '**/*.trx' 
+  - task: PublishBuildArtifacts@1
 
